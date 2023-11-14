@@ -4,13 +4,14 @@
     flex-direction: column;
 }
 .header-title{
-    font-size: 4.2rem;
+    font-size: 5.2rem;
+    color: rgb(244, 240, 235);
 }
 .header-text{
     margin-top: -1.8rem;
     margin-bottom: 2.8rem;
     opacity: 0.8;
     max-width: 770px;
-    color: black;
+    color: rgb(244, 240, 235);
     font-weight: 600;
 }

@@ -8,6 +8,12 @@ const AppProvider = ({children}) => {
     const [books, setBooks] = useState([]);
     const [loading, setLoading] = useState(true);
     const [resultTitle, setResultTitle] = useState("");
+    const [cart, setCart] = useState([]);
+    
+
+    const addToCart = (book) => {
+        setCart(currentCart => [...currentCart, book]);
+      };
 
     const fetchBooks = useCallback(async() => {
         setLoading(true);
@@ -26,7 +32,7 @@ const AppProvider = ({children}) => {
                         cover_id: cover_i,
                         edition_count: edition_count,
                         first_publish_year: first_publish_year,
-                        title: title
+                        title: title,
                     }
                 });
 
@@ -51,6 +57,9 @@ const AppProvider = ({children}) => {
     useEffect(() => {
         fetchBooks();
     }, [searchTerm, fetchBooks]);
+  
+
+    const value = { cart, addToCart };
 
     return (
         <AppContext.Provider value = {{
@@ -66,3 +75,4 @@ export const useGlobalContext = () => {
 }
 
 export {AppContext, AppProvider};
+

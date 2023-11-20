@@ -8,12 +8,9 @@ const AppProvider = ({children}) => {
     const [books, setBooks] = useState([]);
     const [loading, setLoading] = useState(true);
     const [resultTitle, setResultTitle] = useState("");
-    const [cart, setCart] = useState([]);
     
 
-    const addToCart = (book) => {
-        setCart(currentCart => [...currentCart, book]);
-      };
+  
 
     const fetchBooks = useCallback(async() => {
         setLoading(true);
@@ -59,7 +56,6 @@ const AppProvider = ({children}) => {
     }, [searchTerm, fetchBooks]);
   
 
-    const value = { cart, addToCart };
 
     return (
         <AppContext.Provider value = {{

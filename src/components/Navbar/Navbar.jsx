@@ -6,6 +6,7 @@ import {HiOutlineMenuAlt3} from "react-icons/hi";
 
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
+  
   const handleNavbar = () => setToggleMenu(!toggleMenu);
 
   return (
@@ -19,7 +20,7 @@ const Navbar = () => {
           <button type = "button" className='navbar-toggler-btn' onClick={handleNavbar}>
             <HiOutlineMenuAlt3 size = {35} style = {{
               color: `${toggleMenu ? "#fff" : "#010101"}`
-            }} />
+            }} /> 
           </button>
         </div>
 

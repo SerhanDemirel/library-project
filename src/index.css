@@ -49,10 +49,7 @@ input{
   font-family: inherit;
   font-size: 1.6rem;
 }
-.resize-animation-stopper *{
-  animation: none!important;
-  transition: none!important;
-}
+
 
 .bg-pink{background-color: var(--pink-color);}
 .bg-purple{background-color: var(--purple-color);}

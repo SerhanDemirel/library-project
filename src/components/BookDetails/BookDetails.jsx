@@ -9,7 +9,7 @@ import { NavLink } from "react-router-dom";
 import { useGlobalContext } from "../../context.";
 
 
-const URL = "https://openlibrary.org/works/";
+const URL = "https://openlibrary.org/works/"; //spesifik urun icin
 
 const BookDetails = () => {
   const price = 10;
@@ -17,13 +17,7 @@ const BookDetails = () => {
   const [loading, setLoading] = useState(false);
   const [book, setBook] = useState(null);
   const navigate = useNavigate();
-  const { addToCart } = useGlobalContext();
-
-  const handleAddToCart = () => {
-    if (book) {
-      addToCart({ ...book, price });
-    }
-  };
+ 
 
   useEffect(() => {
     setLoading(true);
